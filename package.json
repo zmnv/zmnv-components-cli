@@ -1,6 +1,6 @@
 {
   "name": "zmnv-components-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Генератор компонентов для React Native",
   "preferGlobal": true,
   "bin": {
