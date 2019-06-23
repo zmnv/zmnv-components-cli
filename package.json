@@ -52,6 +52,8 @@
     "clear": "^0.1.0",
     "commander": "^2.20.0",
     "directory-tree": "^2.2.3",
-    "prompt-confirm": "^2.0.4"
+    "https": "^1.0.0",
+    "prompt-confirm": "^2.0.4",
+    "semver": "^6.1.1"
   }
 }
