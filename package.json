@@ -1,6 +1,6 @@
 {
   "name": "zmnv-components-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Генератор компонентов для React Native",
   "preferGlobal": true,
   "bin": {
@@ -8,15 +8,15 @@
   },
   "scripts": {
     "build": "gulp && npm run dev:install",
-    "build:webpack": "webpack --config ./webpack.config.js --mode development",
-    "start": "webpack --watch --config ./webpack.config.js --mode development",
-    "dev": "nodemon ./build/generator",
-    "dev:install": "npm i -g /Users/zmnv/ZMNV/dev/zmnv-components-cli",
-    "generate": "npm run build && node ./build/generator"
+    "dev:install": "npm i -g /Users/zmnv/ZMNV/dev/zmnv-components-cli"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Valeriy Zimnev (@zmnv)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmnv/zmnv-components-cli.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
