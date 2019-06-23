@@ -2,7 +2,7 @@ import readline from 'readline';
 
 import { createFolder, getNames, saveFile, appLogPattern } from './helpers';
 import { PureComponent, ComponentStyles, DefaultExportToObject } from './filePatters';
-
+import { version } from '../package.json';
 
 function generateComponent(componentName = '') {
     const componentFolder = createFolder(componentName);
@@ -19,14 +19,18 @@ function generateComponent(componentName = '') {
     saveFile(`${componentFolder}/${filenames.index}`, indexBody);
 }
 
-export const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
+function Generator() {
+    console.log(appLogPattern, version);
 
-rl.question('Введите название компонента: ', (componentName) => {
-    // eslint-disable-next-line no-console
-    // console.log(`Введите название компонента: ${componentName}`);
-    generateComponent(componentName);
-    rl.close();
-});
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+    
+    rl.question('Введите название компонента: ', (componentName) => {
+        generateComponent(componentName);
+        rl.close();
+    });
+}
+
+module.exports = Generator;

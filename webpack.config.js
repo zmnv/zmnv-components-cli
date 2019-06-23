@@ -10,10 +10,12 @@ module.exports = {
     },
     target: 'node',
     externals: [nodeExternals()],
-    entry: './src/generator.js',
+    entry: {
+        generator: './src/generator.js',
+    },
     output: {
+        filename: '[name].js',
         path: path.resolve(__dirname, './build'),
-        filename: 'generator.js',
     },
     module: {
         rules: [
